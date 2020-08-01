@@ -18,12 +18,13 @@ Dönüşüm formüllerinde geçen katsayılar (parametreler) biliniyorsa, bir si
 
 **Çalıştırıldığında;**
 
-+ Ortak Stereomodel Koordinatlar; Ox1, Ox2, Ox3, Ox4, Oy1, Oy2, Oy3, Oy4
-+ Ortak Arazi Koordinatlar; OX1, OX2, OX3, OX4, OY1, OY2, OY3, OY4
++ Ortak stereomodel koordinatlar; Ox1, Ox2, Ox3, Ox4, Oy1, Oy2, Oy3, Oy4
++ Ortak arazi koordinatlar; OX1, OX2, OX3, OX4, OY1, OY2, OY3, OY4
 
 Yukarıdaki değerlerin girilmesi,
 
-+ Steromodel Koordinatlar; x, y
++ Steromodel koordinatlar; x, y
+
 Yukarıdaki değerlerinde girilmesi gerekmektedir. 
 
 **Hesaplanan;**
