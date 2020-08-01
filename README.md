@@ -10,4 +10,4 @@ Jeodezi  uygulamalarında, başlangıç değerleri farklı, birbirlerine göre d
 
 Dönüşüm formüllerinde geçen katsayılar (parametreler) biliniyorsa, bir sistemde koordinatları verilmiş bir noktanın diğer sistemdeki koordinatlarının bulunması dönüşüm formüllerinin uygulanmasından başka bir şey değildir. Genellikle dönüşüm parametreleri bilinmez, her iki sistemde de koordinatları bilinen ortak yada özdeş noktalar vardır. Ve bunlar yardımı ile parametreler hesaplanır. Çoğunlukla da bu hesaplama bir En Küçük Kareler Dengelemesine göre yapılır.(Prof.Dr.A.Yaşayan) Yazılım, Stereomodel koordinatları ve arazi koordinatları bilinen 4 ortak nokta yardımı ile dönüşüm katsayılarını hesaplamakta ve bu katsayılar ile diğer stereomodel koordinatlarının başka sistemdeki arazi koordinatlarını hesaplamaya (Helmert Benzerlik Dönüşümü) yardımcı olmak amaçlı kullanılmaktadır.
 
-NOT: Koordinatlar arasında korelasyon yok ve herbir koordinat eşit ağırlıklı olarak düşünülmelidir.
+NOT: Koordinatlar arasında korelasyon yok ve her bir koordinat eşit ağırlıklı olarak düşünülmelidir.
