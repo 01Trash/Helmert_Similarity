@@ -117,7 +117,6 @@ int main()
 	printf("b değeri: %f\n", b);
 	printf("c değeri: %f\n", c);
 	printf("d değeri: %f\n", d);
-
 	/* Ortak noktaların dönüştürülmüş koordinatlarının hesaplanması (Helmert Benzerlik Dönüşümü ile); Xd1, Yd1, Xd2, Yd2, Xd3, Yd3, Xd4, Yd4;
 	Xd1 = (a * Ox1) - (b * Oy1) + c;
 	Yd1 = (b * Ox1) + (a * Oy1) + d;
@@ -140,7 +139,6 @@ int main()
 	printf("Xd2 dönüştürülmüş değeri: %f\t Yd2 dönüştürülmüş değeri: %f\n", Xd2, Yd2);
 	printf("Xd3 dönüştürülmüş değeri: %f\t Yd3 dönüştürülmüş değeri: %f\n", Xd3, Yd3);
 	printf("Xd4 dönüştürülmüş değeri: %f\t Yd4 dönüştürülmüş değeri: %f\n", Xd4, Yd4);
-
 	/* Ortak noktaların koordinatlarına getirilecek düzeltmelerin hesaplanması; Vx1, Vy1, Vx2, Vy2, Vx3, Vy3, Vx4, Vy4;
 	Vx1 = Xd1 - OX1;
 	Vy1 = Yd1 - OY1;
@@ -163,7 +161,6 @@ int main()
 	printf("Vx2 düzeltme değeri: %f\t Vy2 düzeltme değeri: %f\n", Vx2, Vy2);
 	printf("Vx3 düzeltme değeri: %f\t Vy3 düzeltme değeri: %f\n", Vx3, Vy3);
 	printf("Vx4 düzeltme değeri: %f\t Vy4 düzeltme değeri: %f\n", Vx4, Vy4);
-
 	/* Ortak noktalar dışındaki,diğer stereomodel koordinatlarına karşılık gelen arazi koordinatlarının hesaplanması Helmert Benzerlik Dönüşümü ile; X, Y;
 	X = (a * x) - (b * y) + c;
 	Y = (b * x) + (a * y) + d; */
@@ -171,19 +168,16 @@ int main()
 	printf("X değeri: %f\n", X);
 	Y = (b * x) + (a * y) + d; 
 	printf("Y değeri: %f\n", Y);
-
 	/* Bir Koordinatın ortalama hatasının hesaplanması; n, mo
 	n = 4;
 	mo = Sqrt(((Vx1^2) + (Vx2^2)+ (Vx3^2)+ (Vx4^2)+ (Vy1^2)+ (Vy2^2)+ (Vy3^2)+ (Vy4^2)) / ((2 * n) - 4)); */
 	n = 4;
 	mo = pow(((pow(Vx1, 2) + pow(Vx2, 2)+ pow(Vx3, 2)+ pow(Vx4, 2)+ pow(Vy1, 2)+ pow(Vy2, 2)+ pow(Vy3, 2)+ pow(Vy4, 2)) / ((2 * n) - 4)), 0.5);
 	printf("mo değeri: %f\n", mo);
-	
 	/* Konum ortalama hatasının hesaplanması; mp
 	mp = Sqrt(((Vx1^2) + (Vx2^2) + (Vx3^2) + (Vx4^2) + (Vy1^2) + (Vy2^2) + (Vy3^2) + (Vy4^2)) / (n - 2)); */
 	mp = pow(((pow(Vx1, 2) + pow(Vx2, 2) + pow(Vx3, 2) + pow(Vx4, 2) + pow(Vy1, 2) + pow(Vy2, 2) + pow(Vy3, 2) + pow(Vy4, 2)) / (n - 2)), 0.5);
 	printf("mp değeri: %f\n", mp);
-
 	/* Ölçek hesaplanması; lamda
 	λ = Sqrt((a^2) + (b^2)); */
 	lamda = pow((pow(a, 2) + pow(b, 2)), 0.5);
