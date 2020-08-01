@@ -57,7 +57,6 @@ int main()
 
 		/// Bilinmeyenlerin hesaplanması.
 	printf("\n\t=== Hesap sonuçları! === \n");
-
 	/* a, b, c, d dönüşüm parametrelerinin hesaplanması;
 	Ortak noktalar kümesinin ağırlık noktası hesaplanması; xg, yg, Xg, Yg;
 	xg = (Ox1 + Ox2 + Ox3 + Ox4) / 4;
@@ -134,7 +133,7 @@ int main()
 	Yd3 = (b * Ox3) + (a * Oy3) + d;
 	Xd4 = (a * Ox4) - (b * Oy4) + c;
 	Yd4 = (b * Ox4) + (a * Oy4) + d;
-	printf(" === Dönüştürülmüş Arazi Koordinatları! ===\n");
+	printf(" \t\t\t=== Dönüştürülmüş Arazi Koordinatları! ===\n");
 	printf("Xd1 dönüştürülmüş değeri: %f\t Yd1 dönüştürülmüş değeri: %f\n", Xd1, Yd1);
 	printf("Xd2 dönüştürülmüş değeri: %f\t Yd2 dönüştürülmüş değeri: %f\n", Xd2, Yd2);
 	printf("Xd3 dönüştürülmüş değeri: %f\t Yd3 dönüştürülmüş değeri: %f\n", Xd3, Yd3);
@@ -156,7 +155,7 @@ int main()
 	Vy3 = Yd3 - OY3;
 	Vx4 = Xd4 - OX4;
 	Vy4 = Yd4 - OY4;
-	printf(" === Düzeltmeler! ===\n");
+	printf(" \t\t\t=== Düzeltmeler! ===\n");
 	printf("Vx1 düzeltme değeri: %f\t Vy1 düzeltme değeri: %f\n", Vx1, Vy1);
 	printf("Vx2 düzeltme değeri: %f\t Vy2 düzeltme değeri: %f\n", Vx2, Vy2);
 	printf("Vx3 düzeltme değeri: %f\t Vy3 düzeltme değeri: %f\n", Vx3, Vy3);
