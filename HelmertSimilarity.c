@@ -156,6 +156,7 @@ int main()
 	Vy3 = Yd3 - OY3;
 	Vx4 = Xd4 - OX4;
 	Vy4 = Yd4 - OY4;
+	printf(" === Düzeltmeler! ===\n");
 	printf("Vx1 düzeltme değeri: %f Vy1 düzeltme değeri: %f\n", Vx1, Vy1);
 	printf("Vx2 düzeltme değeri: %f Vy2 düzeltme değeri: %f\n", Vx2, Vy2);
 	printf("Vx3 düzeltme değeri: %f Vy3 düzeltme değeri: %f\n", Vx3, Vy3);
