@@ -111,6 +111,10 @@ int main()
 	b = (((xo1 * Yo1) - (yo1 * Xo1)) + ((xo2 * Yo2) - (yo2 * Xo2)) + ((xo3 * Yo3) - (yo3 * Xo3)) + ((xo4 * Yo4) - (yo4 * Xo4))) / ((xo1 * xo1) + (yo1 * yo1)) + ((xo2 * xo2) + (yo2 * yo2)) + ((xo3 * xo3) + (yo3 * yo3)) + ((xo4 * xo4) + (yo4 * yo4));
 	c = Xg - (a * xg) + (b * yg);
 	d = Yg - (b * xg) - (a * yg);
+	printf("a değeri: %f\n", a);
+	printf("b değeri: %f\n", b);
+	printf("c değeri: %f\n", c);
+	printf("d değeri: %f\n", d);
 
 	/* Ortak noktaların dönüştürülmüş koordinatlarının hesaplanması (Helmert Benzerlik Dönüşümü ile); Xd1, Yd1, Xd2, Yd2, Xd3, Yd3, Xd4, Yd4;
 	Xd1 = (a * Ox1) - (b * Oy1) + c;
@@ -129,14 +133,11 @@ int main()
 	Yd3 = (b * Ox3) + (a * Oy3) + d;
 	Xd4 = (a * Ox4) - (b * Oy4) + c;
 	Yd4 = (b * Ox4) + (a * Oy4) + d;
-	printf("Xd1 dönüştürülmüş değeri: %f\n", Xd1);
-	printf("Yd1 dönüştürülmüş değeri: %f\n", Yd1);
-	printf("Xd2 dönüştürülmüş değeri: %f\n", Xd2);
-	printf("Yd2 dönüştürülmüş değeri: %f\n", Yd2);
-	printf("Xd3 dönüştürülmüş değeri: %f\n", Xd3);
-	printf("Yd3 dönüştürülmüş değeri: %f\n", Yd3);
-	printf("Xd4 dönüştürülmüş değeri: %f\n", Xd4);
-	printf("Yd4 dönüştürülmüş değeri: %f\n", Yd4);
+	printf(" === Dönüştürülmüş Arazi Koordinatları! ===\n");
+	printf("Xd1 dönüştürülmüş değeri: %f Yd1 dönüştürülmüş değeri: %f\n", Xd1, Yd1);
+	printf("Xd2 dönüştürülmüş değeri: %f Yd2 dönüştürülmüş değeri: %f\n", Xd2, Yd2);
+	printf("Xd3 dönüştürülmüş değeri: %f Yd3 dönüştürülmüş değeri: %f\n", Xd3, Yd3);
+	printf("Xd4 dönüştürülmüş değeri: %f Yd4 dönüştürülmüş değeri: %f\n", Xd4, Yd4);
 
 	/* Ortak Noktaların Koordinatlarına getirilecek düzeltmelerin hesaplanması; Vx1, Vy1, Vx2, Vy2, Vx3, Vy3, Vx4, Vy4;
 	Vx1 = Xd1 - OX1;
@@ -155,14 +156,10 @@ int main()
 	Vy3 = Yd3 - OY3;
 	Vx4 = Xd4 - OX4;
 	Vy4 = Yd4 - OY4;
-	printf("Vx1 düzeltme değeri: %f\n", Vx1);
-	printf("Vy1 düzeltme değeri: %f\n", Vy1);
-	printf("Vx2 düzeltme değeri: %f\n", Vx2);
-	printf("Vy2 düzeltme değeri: %f\n", Vy2);
-	printf("Vx3 düzeltme değeri: %f\n", Vx3);
-	printf("Vy3 düzeltme değeri: %f\n", Vy3);
-	printf("Vx4 düzeltme değeri: %f\n", Vx4);
-	printf("Vy4 düzeltme değeri: %f\n", Vy4);
+	printf("Vx1 düzeltme değeri: %f Vy1 düzeltme değeri: %f\n", Vx1, Vy1);
+	printf("Vx2 düzeltme değeri: %f Vy2 düzeltme değeri: %f\n", Vx2, Vy2);
+	printf("Vx3 düzeltme değeri: %f Vy3 düzeltme değeri: %f\n", Vx3, Vy3);
+	printf("Vx4 düzeltme değeri: %f Vy4 düzeltme değeri: %f\n", Vx4, Vy4);
 
 	/* Ortak noktalar dışındaki,diğer stereomodel koordinatlarına karşılık gelen arazi koordinatlarının hesaplanması Helmert Benzerlik Dönüşümü ile; X, Y;
 	X = (a * x) - (b * y) + c;
