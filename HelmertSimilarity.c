@@ -14,6 +14,7 @@ int main()
 
 		/// Bilinenleri isteyelim.
 	// Ortak Stereomodel Koordinatlar; Ox1, Ox2, Ox3, Ox4, Oy1, Oy2, Oy3, Oy4;
+	printf("=== Stereomodel koordinatlar! === \n");
 	printf("Ox1 değerini giriniz: ");
 	scanf("%lf", &Ox1);
 	printf("Ox2 değerini giriniz: ");
@@ -31,6 +32,7 @@ int main()
 	printf("Oy4 değerini giriniz: ");
 	scanf("%lf", &Oy4);
 	// Ortak Arazi Koordinatlar; OX1, OX2, OX3, OX4, OY1, OY2, OY3, OY4;
+	printf("=== Arazi koordinatları! === \n");
 	printf("OX1 değerini giriniz: ");
 	scanf("%lf", &OX1);
 	printf("OX2 değerini giriniz: ");
