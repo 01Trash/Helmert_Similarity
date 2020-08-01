@@ -16,15 +16,17 @@ Dönüşüm formüllerinde geçen katsayılar (parametreler) biliniyorsa, bir si
 **Kullanım Rehberi;**
 =====================
 
-Çalıştırıldığında;
+**Çalıştırıldığında;**
 
-Ortak Stereomodel Koordinatlar; Ox1, Ox2, Ox3, Ox4, Oy1, Oy2, Oy3, Oy4
-Ortak Arazi Koordinatlar;OX1, OX2, OX3,OX4,OY1,OY2 ,OY3 ,OY4
-Yukarıdaki değerlerin textbox hücrelerine girilmesi,
++ Ortak Stereomodel Koordinatlar; Ox1, Ox2, Ox3, Ox4, Oy1, Oy2, Oy3, Oy4
++ Ortak Arazi Koordinatlar; OX1, OX2, OX3, OX4, OY1, OY2, OY3, OY4
 
-Steromodel Koordinatlar;x , y
-Yukarıdaki değerlerin ise DataGridview hücrelerine girilmesi gerekmektedir. Değerler girildikten hemen sonra Menü’den Hesapla>Stereomodel Koordinatlar>>Arazi Koordinatlar butonu tıklanır. Hesaplanan;
+Yukarıdaki değerlerin girilmesi,
 
-Helmert Benzerlik dönüşüm parametreleri; a,b,c,d
-Stereomodel koordinatlarına karşılık gelen arazi koordinatları; X,Y
-değerleri Menü seçeneğinden  Excel’e aktar  butonuna clik yaparak Microsoft Office Excel Programınıza aktarabilirsiniz.
++ Steromodel Koordinatlar; x, y
+Yukarıdaki değerlerinde girilmesi gerekmektedir. 
+
+**Hesaplanan;**
+
++ Helmert Benzerlik dönüşüm parametreleri; a, b, c, d
++ Stereomodel koordinatlarına karşılık gelen arazi koordinatları; X, Y
