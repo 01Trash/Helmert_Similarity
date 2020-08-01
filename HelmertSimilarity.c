@@ -8,6 +8,9 @@ int main()
 
 	double Ox1, Ox2, Ox3, Ox4, Oy1, Oy2, Oy3, Oy4, OX1, OX2, OX3, OX4, OY1, OY2, OY3, OY4, x, y;
 	double xg, yg, Xg, Yg, xo1, yo1, xo2, yo2, xo3, yo3, xo4, yo4, Xo1, Yo1, Xo2, Yo2, Xo3, Yo3, Xo4, Yo4, a, b, c, d;
+	double Xd1, Yd1, Xd2, Yd2, Xd3, Yd3, Xd4, Yd4;
+	double Vx1, Vy1, Vx2, Vy2, Vx3, Vy3, Vx4, Vy4;
+	double X, Y, n, mo, mp, lamda;
 
 		/// Bilinenleri isteyelim.
 	// Ortak Stereomodel Koordinatlar; Ox1, Ox2, Ox3, Ox4, Oy1, Oy2, Oy3, Oy4;
@@ -120,34 +123,52 @@ int main()
 	Yd3 = (b * Ox3) + (a * Oy3) + d;
 	Xd4 = (a * Ox4) - (b * Oy4) + c;
 	Yd4 = (b * Ox4) + (a * Oy4) + d; */
+	Xd1 = (a * Ox1) - (b * Oy1) + c;
+	Yd1 = (b * Ox1) + (a * Oy1) + d;
+	Xd2 = (a * Ox2) - (b * Oy2) + c;
+	Yd2 = (b * Ox2) + (a * Oy2) + d;
+	Xd3 = (a * Ox3) - (b * Oy3) + c;
+	Yd3 = (b * Ox3) + (a * Oy3) + d;
+	Xd4 = (a * Ox4) - (b * Oy4) + c;
+	Yd4 = (b * Ox4) + (a * Oy4) + d;
 
+	/* Ortak Noktaların Koordinatlarına getirilecek düzeltmelerin hesaplanması; Vx1, Vy1, Vx2, Vy2, Vx3, Vy3, Vx4, Vy4;
+	Vx1 = Xd1 - OX1;
+	Vy1 = Yd1 - OY1;
+	Vx2 = Xd2 - OX2;
+	Vy2 = Yd2 - OY2;
+	Vx3 = Xd3 - OX3;
+	Vy3 = Yd3 - OY3;
+	Vx4 = Xd4 - OX4;
+	Vy4 = Yd4 - OY4; */
+	Vx1 = Xd1 - OX1;
+	Vy1 = Yd1 - OY1;
+	Vx2 = Xd2 - OX2;
+	Vy2 = Yd2 - OY2;
+	Vx3 = Xd3 - OX3;
+	Vy3 = Yd3 - OY3;
+	Vx4 = Xd4 - OX4;
+	Vy4 = Yd4 - OY4;
 
+	/* Ortak noktalar dışındaki,diğer stereomodel koordinatlarına karşılık gelen arazi koordinatlarının hesaplanması Helmert Benzerlik Dönüşümü ile; X, Y;
+	X = (a * x) - (b * y) + c;
+	Y = (b * x) + (a * y) + d; */
+	X = (a * x) - (b * y) + c;
+	Y = (b * x) + (a * y) + d; 
 
-	/* 2.3 Ortak Noktaların Koordinatlarına getirilecek düzeltmelerin hesaplanması;Vx1,Vy1,Vx2,Vy2,Vx3,Vy3,Vx4,Vy4
+	/* Bir Koordinatın ortalama hatasının hesaplanması; n, mo
+	n = 4;
+	mo = Sqrt(((Vx1^2) + (Vx2^2)+ (Vx3^2)+ (Vx4^2)+ (Vy1^2)+ (Vy2^2)+ (Vy3^2)+ (Vy4^2)) / ((2 * n) - 4)); */
+	n = 4;
+	mo = pow(((pow(Vx1, 2) + pow(Vx2, 2)+ pow(Vx3, 2)+ pow(Vx4, 2)+ pow(Vy1, 2)+ pow(Vy2, 2)+ pow(Vy3, 2)+ pow(Vy4, 2)) / ((2 * n) - 4)), 0.5);
+	
+	/* Konum ortalama hatasının hesaplanması; mp
+	mp = Sqrt(((Vx1^2) + (Vx2^2) + (Vx3^2) + (Vx4^2) + (Vy1^2) + (Vy2^2) + (Vy3^2) + (Vy4^2)) / (n - 2)); */
+	mp = pow(((pow(Vx1, 2) + pow(Vx2, 2) + pow(Vx3, 2) + pow(Vx4, 2) + pow(Vy1, 2) + pow(Vy2, 2) + pow(Vy3, 2) + pow(Vy4, 2)) / (n - 2)), 0.5);
 
-	 Vx1 = Xd1 – OX1;
-	Vy1 = Yd1 – OY1;
-	Vx2 = Xd2 – OX2;
-	Vy2 = Yd2 – OY2;
-	Vx3 = Xd3 – OX3;
-	Vy3 = Yd3 – OY3;
-	Vx4 = Xd4 – OX4;
-	Vy4 = Yd4 – OY4;
-	2.4 Ortak noktalar dışındaki,diğer stereomodel koordinatlarına karşılık gelen arazi koordinatlarının hesaplanması(Helmert Benzerlik Dönüşümü ile); X,Y
-
-	X = (a * x) – (b * y) + c;
-	Y = (b * x) + (a * y) + d;
-	2.5 Bir Koordinatın ortalama hatasının hesaplanması;mo
-
-	 n=4;
-	mo = Sqrt(((Vx1^ 2) + (Vx2^2)+ (Vx3^2)+ (Vx4^2)+ (Vy1^2)+ (Vy2^2)+ (Vy3^2)+ (Vy4^2)) / ((2 * n) – 4));
-	2.6 Konum ortalama hatasının hesaplanması;mp
-
-	 mp = Sqrt(((Vx1^2) + (Vx2^2) + (Vx3^2) + (Vx4^2) + (Vy1^2) + (Vy2^2) + (Vy3^2) + (Vy4^2)) / (n – 2));
-	2.7 Ölçek hesaplanması; λ
-
-	λ= Sqrt((a^2) + (b^2));
-	*/
+	/* Ölçek hesaplanması; lamda
+	λ = Sqrt((a^2) + (b^2)); */
+	lamda = pow((pow(a, 2) + pow(b, 2)), 0.5);
 
 	return 0;
 }
