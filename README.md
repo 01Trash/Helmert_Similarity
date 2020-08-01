@@ -12,3 +12,19 @@ Jeodezi  uygulamalarında, başlangıç değerleri farklı, birbirlerine göre d
 Dönüşüm formüllerinde geçen katsayılar (parametreler) biliniyorsa, bir sistemde koordinatları verilmiş bir noktanın diğer sistemdeki koordinatlarının bulunması dönüşüm formüllerinin uygulanmasından başka bir şey değildir. Genellikle dönüşüm parametreleri bilinmez, her iki sistemde de koordinatları bilinen ortak yada özdeş noktalar vardır. Ve bunlar yardımı ile parametreler hesaplanır. Çoğunlukla da bu hesaplama bir En Küçük Kareler Dengelemesine göre yapılır.(Prof.Dr.A.Yaşayan) Yazılım, Stereomodel koordinatları ve arazi koordinatları bilinen 4 ortak nokta yardımı ile dönüşüm katsayılarını hesaplamakta ve bu katsayılar ile diğer stereomodel koordinatlarının başka sistemdeki arazi koordinatlarını hesaplamaya (Helmert Benzerlik Dönüşümü) yardımcı olmak amaçlı kullanılmaktadır.
 
 **NOT:** Koordinatlar arasında korelasyon yok ve her bir koordinat eşit ağırlıklı olarak düşünülmelidir.
+
+**Kullanım Rehberi;**
+=====================
+
+Çalıştırıldığında;
+
+Ortak Stereomodel Koordinatlar; Ox1, Ox2, Ox3, Ox4, Oy1, Oy2, Oy3, Oy4
+Ortak Arazi Koordinatlar;OX1, OX2, OX3,OX4,OY1,OY2 ,OY3 ,OY4
+Yukarıdaki değerlerin textbox hücrelerine girilmesi,
+
+Steromodel Koordinatlar;x , y
+Yukarıdaki değerlerin ise DataGridview hücrelerine girilmesi gerekmektedir. Değerler girildikten hemen sonra Menü’den Hesapla>Stereomodel Koordinatlar>>Arazi Koordinatlar butonu tıklanır. Hesaplanan;
+
+Helmert Benzerlik dönüşüm parametreleri; a,b,c,d
+Stereomodel koordinatlarına karşılık gelen arazi koordinatları; X,Y
+değerleri Menü seçeneğinden  Excel’e aktar  butonuna clik yaparak Microsoft Office Excel Programınıza aktarabilirsiniz.
