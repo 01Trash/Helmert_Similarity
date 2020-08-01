@@ -26,5 +26,5 @@ Yukarıdaki değerlerin girilmesi,
 
 **Hesaplanan;**
 
-+ Helmert Benzerlik dönüşüm parametreleri; a, b, c, d
++ Helmert benzerlik dönüşüm parametreleri; a, b, c, d
 + Stereomodel koordinatlarına karşılık gelen arazi koordinatları; X, Y
